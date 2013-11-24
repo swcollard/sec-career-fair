@@ -157,9 +157,8 @@ public class CompanySearchActivity extends Activity {
     			+ "&welcome=" + ((CheckBox)findViewById(R.id.welcomeBox)).isChecked()
     			+ "&major=" + majorMap.get((String)((Spinner)findViewById(R.id.majorSpinner)).getSelectedItem())
     			+ "&employment=" + employmentParam
-    			+ "golf=false"
+    			+ "&golf=false"
     			+ "&degree=" + degreeParam;
-    	
     	return params;
     }
     

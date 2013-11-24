@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="5dp"
     android:orientation="vertical" >
 
     <LinearLayout
@@ -13,14 +14,9 @@
             android:id="@+id/nameText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
             android:textAppearance="?android:attr/textAppearanceLarge" >
-        </TextView>
-        
-        <TextView
-            android:id="@+id/attendingText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall" >
         </TextView>
 
         <TextView
@@ -28,13 +24,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:autoLink="web"
-            android:textAppearance="?android:attr/textAppearanceSmall" >
+            android:paddingBottom="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium" >
         </TextView>
         
         <TextView
             android:id="@+id/descriptionText"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp" >
         </TextView>
         
         <TextView

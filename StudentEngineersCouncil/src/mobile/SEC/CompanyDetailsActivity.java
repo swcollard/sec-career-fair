@@ -11,7 +11,6 @@ import org.json.JSONObject;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Html;
@@ -66,15 +65,6 @@ public class CompanyDetailsActivity extends Activity {
 	        	// Company Description
 	        	TextView description = (TextView) findViewById(R.id.descriptionText);
 	        	description.setText(Html.fromHtml(company.getString("description") + "<br>"));	
-	        	
-	        	// Company Attending
-	        	TextView attending = (TextView) findViewById(R.id.attendingText);
-	        	String attend = company.getString("attending");
-	        	attending.setText(attend);	
-	        	if(attend.equals("Attending"))
-	        		attending.setTextColor(Color.GREEN);
-	        	else
-	        		attending.setTextColor(Color.RED);
 	        	
 	        	// Days Company is Attending
 	        	TextView days = (TextView) findViewById(R.id.daysText);
