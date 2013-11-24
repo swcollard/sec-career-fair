@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+	
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/SearchText"
+	        android:textAppearance="?android:attr/textAppearanceSmall" >
+	    </TextView>
+	    <EditText
+		        android:id="@+id/queryText"
+		        android:layout_width="match_parent"
+		        android:layout_height="0dip"
+		        android:layout_weight="1"
+		        android:inputType="text"
+		        android:ems="10" >
+		        <requestFocus />
+		</EditText>	
+	
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dip"
+	        android:text="@string/DaysText" >
+		</TextView>
+	    <Spinner 
+	        android:id="@+id/daySpinner"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:prompt="@string/DaysText" >
+		</Spinner>
+	    
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dip"
+	        android:text="@string/MajorText" >
+		</TextView>
+	    <Spinner 
+	        android:id="@+id/majorSpinner"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:prompt="@string/MajorText" >
+		</Spinner>
+	    
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dip"
+	        android:text="@string/DegreeText" >
+		</TextView>
+	    <Spinner 
+	        android:id="@+id/degreeSpinner"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:prompt="@string/DegreeText" >
+		</Spinner>
+	    
+	    <TextView
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dip"
+	        android:text="@string/EmploymentText" >
+		</TextView>
+	    <Spinner 
+	        android:id="@+id/employmentSpinner"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:prompt="@string/EmploymentText" >
+		</Spinner>
+	
+	    <CheckBox
+	        android:id="@+id/welcomeBox"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/WelcomeText" >
+		</CheckBox>
+	    
+	    <Button
+			android:id="@+id/SearchButton"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:onClick="onSearchClick"
+		    android:text="@string/SearchText" >
+		</Button>
+	    
+	</LinearLayout>
+</ScrollView>
