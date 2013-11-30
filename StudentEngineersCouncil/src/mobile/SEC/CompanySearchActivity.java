@@ -71,30 +71,27 @@ public class CompanySearchActivity extends Activity {
                 this, R.array.DaysArray, android.R.layout.simple_spinner_item);
         dayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         daySpinner.setAdapter(dayAdapter);
-        
+
         // majorMap Spinner
         Spinner majorMappinner = (Spinner) findViewById(R.id.majorSpinner);
         ArrayAdapter<CharSequence> majorAdapter = ArrayAdapter.createFromResource(
                 this, R.array.MajorsArray, android.R.layout.simple_spinner_item);
         majorAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         majorMappinner.setAdapter(majorAdapter);
-        
+
         // Degree Spinner
         Spinner degreeSpinner = (Spinner) findViewById(R.id.degreeSpinner);
         ArrayAdapter<CharSequence> degreeAdapter = ArrayAdapter.createFromResource(
                 this, R.array.DegreesArray, android.R.layout.simple_spinner_item);
         degreeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         degreeSpinner.setAdapter(degreeAdapter);
-        
+
         // Employment Spinner
         Spinner employmentSpinner = (Spinner) findViewById(R.id.employmentSpinner);
         ArrayAdapter<CharSequence> employmentAdapter = ArrayAdapter.createFromResource(
                 this, R.array.EmploymentArray, android.R.layout.simple_spinner_item);
         employmentAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         employmentSpinner.setAdapter(employmentAdapter);
-        
-        Button searchButton = (Button) findViewById(R.id.searchButton);
-        searchButton.requestFocus();
     }
 
     /**
@@ -102,7 +99,7 @@ public class CompanySearchActivity extends Activity {
      * @param view	
      */
     public void onSearchClick(View view) {
-    	String params = getParams();
+        String params = getParams();
         String url = "http://sec.tamu.edu/Students/CareerFair/MobileSearch.aspx" + params;
         new Search().execute(url);
     }
@@ -113,22 +110,22 @@ public class CompanySearchActivity extends Activity {
      * @return a String of parameters for the search
      */
     private String getParams() {
-    	String query = ((EditText)findViewById(R.id.queryText)).getText().toString();
-    	if(query.equals(""))
-    		query = "ALL";
-    	
-    		// Configure day parameter
-    	String days = ((Spinner)findViewById(R.id.daySpinner)).getSelectedItem().toString();
-    	String dayParam = "0";
+        String query = ((EditText)findViewById(R.id.queryText)).getText().toString();
+        if(query.equals(""))
+            query = "ALL";
 
-    	if (days.equals("Tue"))
-    		dayParam = "T";
-    	else if (days.equals("Wed"))
-    		dayParam = "W";
-    	else if (days.equals("Both"))
-    		dayParam = "B";
-    	
-    		// Configure employment parameter
+        // Configure day parameter
+        String days = ((Spinner)findViewById(R.id.daySpinner)).getSelectedItem().toString();
+        String dayParam = "0";
+
+        if (days.equals("Tue"))
+            dayParam = "T";
+        else if (days.equals("Wed"))
+            dayParam = "W";
+        else if (days.equals("Both"))
+            dayParam = "B";
+
+        // Configure employment parameter
     	String employment = ((Spinner)findViewById(R.id.employmentSpinner)).getSelectedItem().toString();
     	String employmentParam = "0";
 
