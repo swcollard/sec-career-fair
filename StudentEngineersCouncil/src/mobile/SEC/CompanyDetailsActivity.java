@@ -19,17 +19,16 @@ import android.widget.Toast;
 
 public class CompanyDetailsActivity extends Activity {
 
-	private Context detailsContext;
-	/** Called when the activity is first created. */
+    private Context detailsContext;
+    /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details); 
-	    Bundle extras = getIntent().getExtras();
-	    String guid = extras.getString("guid");
-	    detailsContext = this;
+        Bundle extras = getIntent().getExtras();
+        String guid = extras.getString("guid");
+        detailsContext = this;
         new viewDetails().execute(guid);
-    	// TODO: allow swiping amongst search results
     }
     
     /**
@@ -37,14 +36,14 @@ public class CompanyDetailsActivity extends Activity {
      * Then fill in UI elements
      */
     private class viewDetails extends AsyncTask<String,Integer,String> {	
-    	@Override
-		protected String doInBackground(String... guid) {
+        @Override
+        protected String doInBackground(String... guid) {
 			try {
 				return NetworkHelper.executeHttpGet("http://sec.tamu.edu/common/cf/MobileDetails.aspx?CoGUID="+guid[0]);
 			} catch(Exception e) {
 				e.printStackTrace();
 			}
-			return null;
+            return null;
 		}
     	
     	@Override
@@ -56,7 +55,7 @@ public class CompanyDetailsActivity extends Activity {
 	        	
 	        	// Company Name
 	        	TextView name = (TextView) findViewById(R.id.nameText);
-	        	name.setText(company.getString("name"));	
+	        	name.setText(company.getString("name"));
 	        	
 	        	// Company Web Site
 	        	TextView website = (TextView) findViewById(R.id.websiteText);
