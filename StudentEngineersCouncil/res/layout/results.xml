@@ -19,5 +19,5 @@
         android:layout_height="wrap_content" 
         android:fastScrollEnabled="true" >
     </ListView>
-    
+
 </LinearLayout>
