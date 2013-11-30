@@ -12,7 +12,6 @@
     <string name="EmploymentText">Employment</string>
     <string name="DegreeText">Degree</string>
     <string name="WelcomeText">Welcome Dinner</string>
-    <string name="GolfText">Golf Tournament</string> 
     <string name="ResultLabel">Search Results:</string>
     <string-array name="DaysArray">
         <item>Any</item>
@@ -21,30 +20,30 @@
         <item>Both</item>
     </string-array>
     <string-array name="MajorsArray">
-    	<item>-</item>
-		<item>Aerospace Engineering</item>
-		<item>Agricultural Engineering</item>
-		<item>Biological and Agricultural Engineering</item>
-		<item>Biomedical Engineering</item>
-		<item>Chemical Engineering</item>
-		<item>Civil Engineering</item>
-		<item>Computer Engineering</item>
-		<item>Computer Science</item>
-		<item>Electrical Engineering</item>
-		<item>Engineering Systems Management</item>
-		<item>Engineering Technology</item>
-		<item>Health Physics</item>
-		<item>Industrial and Systems Engineering</item>
-		<item>Industrial Distribution</item>
-		<item>Interdisciplinary Engineering</item>
-		<item>Materials Science and Engineering</item>
-		<item>Mechanical Engineering</item>
-		<item>Nuclear Engineering</item>
-		<item>Ocean Engineering</item>
-		<item>Petroleum Engineering</item>
-		<item>Radiological Health Engineering</item>
-		<item>Safety Engineering</item>
-	</string-array>
+        <item>-</item>
+        <item>Aerospace Engineering</item>
+        <item>Agricultural Engineering</item>
+        <item>Biological and Agricultural Engineering</item>
+        <item>Biomedical Engineering</item>
+        <item>Chemical Engineering</item>
+        <item>Civil Engineering</item>
+        <item>Computer Engineering</item>
+        <item>Computer Science</item>
+        <item>Electrical Engineering</item>
+        <item>Engineering Systems Management</item>
+        <item>Engineering Technology</item>
+        <item>Health Physics</item>
+        <item>Industrial and Systems Engineering</item>
+        <item>Industrial Distribution</item>
+        <item>Interdisciplinary Engineering</item>
+        <item>Materials Science and Engineering</item>
+        <item>Mechanical Engineering</item>
+        <item>Nuclear Engineering</item>
+        <item>Ocean Engineering</item>
+        <item>Petroleum Engineering</item>
+        <item>Radiological Health Engineering</item>
+        <item>Safety Engineering</item>
+    </string-array>
     <string-array name="DegreesArray">
         <item>-</item>
         <item>Bachelors</item>
@@ -59,10 +58,4 @@
         <item>Full-Time</item>
         <item>Part-Time</item>
     </string-array>
-    <string name="ChairQuestion">Question about the fair?</string>
-	<string name="AppQuestion">Question about the application or website?</string>
-    <string name="EmailChairs">Email the Career Fair Chairs</string>
-	<string name="EmailAdmin">Email the System Administrator</string>
-    
-
 </resources>
