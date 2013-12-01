@@ -19,7 +19,7 @@ public class MapActivity extends Activity {
         setContentView(R.layout.map);
         // Load Reed Arena map into WebView
         WebView webView = (WebView)findViewById(R.id.webView1);
-        webView.loadDataWithBaseURL("file:///android_asset/", "<img src='ReedMap.jpg' />", "text/html", "utf-8", null);
+        webView.loadDataWithBaseURL("file:///android_asset/", "<img src='reedmap.jpg' />", "text/html", "utf-8", null);
         webView.getSettings().setBuiltInZoomControls(true);
     }
 }
