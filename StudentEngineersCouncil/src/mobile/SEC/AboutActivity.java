@@ -21,7 +21,7 @@ public class AboutActivity extends Activity {
     		"* Students must present a valid Texas A&M Student ID to be admitted to the Career Fair exhibition.<br>" +
     		"* The Career Fair and all of its events are free for students.<br>" +
     		"* Dress for the career fair exhibition is business casual.<br>" +
-    		"* Students interested in attending the Welcome Dinner must register through our website at a later date.<br>";
+    		"* Students interested in attending the Welcome Dinner must register through our website.<br>";
 	
 	/** Called when the activity is first created. */
     @Override
@@ -32,18 +32,21 @@ public class AboutActivity extends Activity {
     }
     
     private String aboutText() {
-    	try {
-	    	SECDataSource dataSource = new SECDataSource(this);
-	    	dataSource.open();
-	    	String about = dataSource.getAbout();
-	    	dataSource.close();
-	    	if (about == null || "".equals(about))
-	    		return backupAbout;
-	    	else
-	    		return about;
-    	}
-    	catch (Exception e){
-    		return backupAbout;
-    	}
+        /*
+        try {
+            SECDataSource dataSource = new SECDataSource(this);
+            dataSource.open();
+            String about = dataSource.getAbout();
+            dataSource.close();
+            if (about == null || "".equals(about))
+                return backupAbout;
+            else
+                return about;
+        }
+        catch (Exception e){
+            return backupAbout;
+        }
+        */
+        return backupAbout;
     }
 }
