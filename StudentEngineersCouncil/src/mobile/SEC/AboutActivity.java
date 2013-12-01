@@ -14,7 +14,7 @@ import android.widget.TextView;
 public class AboutActivity extends Activity {
 
 	private static String backupAbout = "<h2>General Career Fair Information:</h2> <p>The SEC Engineering Career Fair is the premier recruiting event for " +
-    		"the Dwight Look College of Engineering. The career fair is planned, organized, and staffed by the Student Engineers’ " +
+    		"the Dwight Look College of Engineering. The career fair is planned, organized, and staffed by the Student Engineers' " +
     		"Council and is one of the largest student-run career fairs in the nation. Historically, over 350 companies and 5,000 " +
     		"engineering students have attended the career fair during the Spring semester.</p> <br>" +
     		"* All Texas A&M System students are invited to attend the career fair exhibition. No registration is necessary.<br>" +
