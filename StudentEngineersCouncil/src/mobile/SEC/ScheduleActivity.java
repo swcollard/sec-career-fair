@@ -24,8 +24,8 @@ public class ScheduleActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.about);
-        ((TextView)findViewById(R.id.aboutText)).setText(Html.fromHtml(itineraryText()));
+        setContentView(R.layout.schedule);
+        ((TextView)findViewById(R.id.scheduleText)).setText(Html.fromHtml(itineraryText()));
     }
     
     private String itineraryText() {

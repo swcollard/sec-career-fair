@@ -2,14 +2,50 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/gradientbackground" >
 
-    <TextView
-        android:id="@+id/aboutText"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp" >
-    </TextView>
+        android:orientation="vertical" >
 
+        <TextView
+            android:id="@+id/generalInfoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:paddingTop="20dp"
+            android:text="@string/ContactText" >
+        </TextView>
+
+        <Button
+            android:id="@+id/emailCareerFair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/EmailCareerFairText" >
+        </Button>
+
+        <TextView
+            android:id="@+id/appVersionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:paddingLeft="10dp" >
+        </TextView>
+
+        <Button
+            android:id="@+id/emailSysAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/EmailSysAdminText" >
+        </Button>
+    </LinearLayout>
 </ScrollView>

@@ -7,8 +7,11 @@
 package mobile.SEC;
 
 import android.app.Activity;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 public class AboutActivity extends Activity {
@@ -28,7 +31,23 @@ public class AboutActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.about);
-        ((TextView)findViewById(R.id.aboutText)).setText(Html.fromHtml(aboutText()));
+        ((TextView)findViewById(R.id.generalInfoText)).setText(Html.fromHtml(aboutText()));
+
+        //Display App Version Name
+        String versionName = null;
+        try {
+            versionName = this.getPackageManager()
+                    .getPackageInfo(this.getPackageName(), 0).versionName;
+        } catch (NameNotFoundException e) {
+            Log.d(AboutActivity.class.getSimpleName(), "Could not find versionName");
+        }
+        TextView appVersion = (TextView) findViewById(R.id.appVersionText);
+        if (versionName != null) {
+            appVersion.setVisibility(View.VISIBLE);
+            appVersion.setText("App Version: " + versionName);
+        } else {
+            appVersion.setVisibility(View.GONE);
+        }
     }
     
     private String aboutText() {

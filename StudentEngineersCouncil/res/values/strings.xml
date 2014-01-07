@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Engineering Career Fair</string>
-    <string name="AboutText">About</string>
+    <string name="AboutText">General Information</string>
+    <string name="InfoText">Information</string>
     <string name="ScheduleText">Schedule</string>
-    <string name="MapsText">Maps</string>
+    <string name="MapsText">Reed Arena Map</string>
+    <string name="AdvancedSearchText">Advanced Search</string>
     <string name="CompanySearchText">Company Search</string>
+    <string name="AllAttendingText">All Attending Companies</string>
+    <string name="SavedCompaniesText">Saved Companies</string>
     <string name="ContactText">Contact Information</string>
     <string name="SearchText">Search</string>
     <string name="DaysText">Days Attending</string>
@@ -12,7 +16,9 @@
     <string name="EmploymentText">Employment</string>
     <string name="DegreeText">Degree</string>
     <string name="WelcomeText">Welcome Dinner</string>
-    <string name="ResultLabel">Search Results:</string>
+    <string name="ResultLabel">Search Results</string>
+    <string name="EmailCareerFairText">Question about the fair?</string>
+    <string name="EmailSysAdminText">Problem with the app?</string>
     <string-array name="DaysArray">
         <item>Any</item>
         <item>Tue</item>
