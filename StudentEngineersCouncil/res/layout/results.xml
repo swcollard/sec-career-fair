@@ -6,13 +6,6 @@
     android:background="@drawable/gradientbackground"
     >
 
-    <TextView
-        android:id="@+id/resultsLabel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/ResultLabel" >
-    </TextView>
-    
     <ListView
         android:id="@+id/resultsView"
         android:layout_width="match_parent"

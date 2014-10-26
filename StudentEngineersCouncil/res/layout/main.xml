@@ -1,28 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/gradientbackground">
-
-    <ImageView 
-        android:id="@+id/logoView"
+    android:background="@drawable/gradientbackground"
+    >
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/logo"
-        android:contentDescription="@string/app_name" >
-    </ImageView>
+        android:orientation="vertical"
+        android:focusable="true"
+        >
 
-    <ListView
-        android:id="@+id/mainNav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </ListView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/CompanySearchText" >
+        </TextView>
 
-    <TextView 
-        android:id="@+id/text1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </TextView>
+        <TextView
+            android:id="@+id/allCompanies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/AllAttendingText"
+            android:clickable="true"
+            android:onClick="navigateToActivity" >
+        </TextView>
 
-</LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@android:color/darker_gray"
+            />
+
+        <TextView
+            android:id="@+id/savedCompanies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/SavedCompaniesText"
+            android:clickable="true"
+            android:onClick="navigateToActivity" >
+        </TextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@android:color/darker_gray"
+            />
+
+        <TextView
+            android:id="@+id/advancedSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/AdvancedSearchText"
+            android:clickable="true"
+            android:onClick="navigateToActivity" >
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingTop="15dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/InfoText" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/genInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/AboutText"
+            android:clickable="true"
+            android:onClick="navigateToActivity" >
+        </TextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@android:color/darker_gray"
+            />
+
+        <TextView
+            android:id="@+id/schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/ScheduleText"
+            android:clickable="true"
+            android:onClick="navigateToActivity" >
+        </TextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@android:color/darker_gray"
+            />
+
+        <TextView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/MapsText"
+            android:clickable="true"
+            android:onClick="navigateToActivity" >
+        </TextView>
+    </LinearLayout>
+</ScrollView>

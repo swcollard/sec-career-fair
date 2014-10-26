@@ -12,24 +12,16 @@ import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 public class CompanySearchActivity extends Activity {
 
-    private Context searchContext;
     private static Map<String,Integer> majorMap;
     static {
         majorMap = new HashMap<String, Integer>(23);
@@ -63,7 +55,6 @@ public class CompanySearchActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search); 
 
-        searchContext = this;
         // Days Attending Spinner
         Spinner daySpinner = (Spinner) findViewById(R.id.daySpinner);
         ArrayAdapter<CharSequence> dayAdapter = ArrayAdapter.createFromResource(
@@ -100,7 +91,7 @@ public class CompanySearchActivity extends Activity {
     public void onSearchClick(View view) {
         String params = getParams();
         String url = "http://sec.tamu.edu/Students/CareerFair/MobileSearch.aspx" + params;
-        new Search().execute(url);
+        new SearchTask(this).execute(url);
     }
 
     /**
@@ -125,28 +116,28 @@ public class CompanySearchActivity extends Activity {
             dayParam = "B";
 
         // Configure employment parameter
-    	String employment = ((Spinner)findViewById(R.id.employmentSpinner)).getSelectedItem().toString();
-    	String employmentParam = "0";
+        String employment = ((Spinner)findViewById(R.id.employmentSpinner)).getSelectedItem().toString();
+        String employmentParam = "0";
 
-    	if(employment.equals("Intern"))
-    		employmentParam = "I";
-    	else if (employment.equals("Co-Op"))
-    		employmentParam = "C";
-    	else if (employment.equals("Intern or Co-Op"))
-    		employmentParam = "B";
-    	else if (employment.equals("Full-Time"))
-    		employmentParam = "F";
-    	else if (employment.equals("Part-Time"))
-    		employmentParam = "P";
-    	
-    		// Configure degree parameter
-    	String degree = ((Spinner)findViewById(R.id.degreeSpinner)).getSelectedItem().toString();
-    	String degreeParam = "0";
+        if(employment.equals("Intern"))
+            employmentParam = "I";
+        else if (employment.equals("Co-Op"))
+            employmentParam = "C";
+        else if (employment.equals("Intern or Co-Op"))
+            employmentParam = "B";
+        else if (employment.equals("Full-Time"))
+            employmentParam = "F";
+        else if (employment.equals("Part-Time"))
+            employmentParam = "P";
 
-    	if(degree.equals("Bachelors"))
-    		degreeParam = "B";
-    	else if (degree.equals("Masters"))
-    		degreeParam = "M";
+        // Configure degree parameter
+        String degree = ((Spinner)findViewById(R.id.degreeSpinner)).getSelectedItem().toString();
+        String degreeParam = "0";
+
+        if(degree.equals("Bachelors"))
+            degreeParam = "B";
+        else if (degree.equals("Masters"))
+            degreeParam = "M";
     	else if (degree.equals("Doctorate"))
     		degreeParam = "D";
     	
@@ -161,66 +152,5 @@ public class CompanySearchActivity extends Activity {
     	return params;
     }
     
-    /**
-     * Async Task to perform search off the UI thread
-     * Uses Toast notifications to let user know what is happening
-     */
-    private class Search extends AsyncTask<String,Integer,String> {
-    	
-    	@Override
-    	protected void onPreExecute() {
-    		Toast.makeText(searchContext, "Searching...", Toast.LENGTH_SHORT).show();
-    	}
-    	
-    	@Override
-		protected String doInBackground(String... url) {
-			try {
-				return NetworkHelper.executeHttpGet(url[0]);
-			} catch(Exception e) {
-				e.printStackTrace();
-			}
-			return null;
-		}
-		
-    	@Override
-		protected void onPostExecute(String response) {
-    		try {
-				JSONObject jObject = new JSONObject(response);
-					// Report number of search results
-	            int count = jObject.getInt("count");
-	            if(count < 0) {
-	            	Toast.makeText(searchContext, "Server Failed to Perform Search", Toast.LENGTH_SHORT).show();
-	            	return;
-	            }
-	            else if (count == 0) {
-	            	Toast.makeText(searchContext, "No Matches Found", Toast.LENGTH_SHORT).show();
-	            	return;
-	            }
-	            else if (count == 1) {
-	            	Toast.makeText(searchContext, "Found 1 Match", Toast.LENGTH_SHORT).show();
-	            }
-	            else {
-	            	Toast.makeText(searchContext, "Found " + count + " Matches", Toast.LENGTH_SHORT).show();
-	            }
-	            
-	            Bundle searchResults = new Bundle();
-	            JSONArray companyList = jObject.getJSONArray("companyList");
-	            // Build search results map
-	            for(int i = 0; i<companyList.length(); i++) {
-	            	JSONObject company = companyList.getJSONObject(i);
-	            	String name = company.getString("name");
-	            	String guid = company.getString("guid");
-	            	searchResults.putString(name, guid);
-	
-	            }
-	            // Pass search results to the SearchResultsActivity to be displayed
-	            Intent i = new Intent(searchContext, SearchResultsActivity.class);
-	            i.putExtras(searchResults);
-	            startActivity(i);
-    		} catch(Exception e) {
-    			e.printStackTrace();
-    			Toast.makeText(searchContext, "Failed to Perform Search", Toast.LENGTH_SHORT).show();
-    		}
-		}
-    }
+
 }

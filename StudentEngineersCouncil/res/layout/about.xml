@@ -29,23 +29,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="@string/EmailCareerFairText" >
+            android:text="@string/EmailCareerFairText"
+            android:onClick="sendEmail" >
         </Button>
-
-        <TextView
-            android:id="@+id/appVersionText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:paddingLeft="10dp" >
-        </TextView>
 
         <Button
             android:id="@+id/emailSysAdmin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="@string/EmailSysAdminText" >
+            android:text="@string/EmailSysAdminText"
+            android:onClick="sendEmail" >
         </Button>
+
+        <TextView
+            android:id="@+id/appVersionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+        </TextView>
     </LinearLayout>
 </ScrollView>
