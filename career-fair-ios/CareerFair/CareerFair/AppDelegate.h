@@ -1,0 +1,17 @@
+//
+//  AppDelegate.h
+//  CareerFair
+//
+//  Created by Sam Collard on 10/26/14.
+//  Copyright (c) 2014 Sam Collard. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
+
+
+@end
+

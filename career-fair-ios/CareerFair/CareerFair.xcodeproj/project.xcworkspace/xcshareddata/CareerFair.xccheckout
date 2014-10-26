@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1E52E28B-D682-4880-A685-E77365DFE5BF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CareerFair</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5341C32E9C2FFFAEE290E2F5074F6A709DA10ABC</key>
+		<string>https://github.com/swcollard/sec-career-fair.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>career-fair-ios/CareerFair/CareerFair.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5341C32E9C2FFFAEE290E2F5074F6A709DA10ABC</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/swcollard/sec-career-fair.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5341C32E9C2FFFAEE290E2F5074F6A709DA10ABC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5341C32E9C2FFFAEE290E2F5074F6A709DA10ABC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>sec-career-fair</string>
+		</dict>
+	</array>
+</dict>
+</plist>
